@@ -15,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('flutter_rust_bridge quickstart')),
-        body: Center(
-          child: Text(
-            'Action: Call Rust `greet("Tom")`\nResult: `${greet(name: "Tom")}`',
-          ),
+        body: 
+        ListView(
+          children: [
+            Text('Action: Call Rust `greet("Tom")`\nResult: `${greet(name: "Tom")}`'),
+            Text('Action: Call Rust `miladAdd(a: 1, b: 2)`\nResult: `${miladAdd(a: 1, b: 2)}`'),
+          ],
         ),
       ),
     );

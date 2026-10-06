@@ -8,3 +8,6 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 
 String greet({required String name}) =>
     RustLib.instance.api.crateApiSimpleGreet(name: name);
+
+int miladAdd({required int a, required int b}) =>
+    RustLib.instance.api.crateApiSimpleMiladAdd(a: a, b: b);
